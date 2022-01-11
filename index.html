@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,12 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
+
   <body>
-    <div class="container is-fluid">
+
+    <div class="container is-fullhd">
         <div class="notification is-primary has-text-centered">
           <p><strong><em> Welcome to the Ye's Translation World</em></strong></p>
         </div>
     </div>
+
     <div class=" is-flex">
         <div class="column is-one-fifth">
             <div class="notification is-primary">
@@ -34,13 +38,16 @@
                 </nav>
             </div>
         </div>
+
         <div class="column is-one-third ">
             <div>
             <button id="refresh-button" class="button is-medium  is-info is-outlined"> Refresh</button>
             <button id="save-button" class="button is-medium  is-info is-outlined"> Save</button>
             </div>
             <div>
-                <textarea class="textarea" placeholder="e.g. Your Quote"></textarea>
+              <div class="control">
+                <p class="input py-4 my-3" type="text" value="quote" readonly>
+              </div>
             </div>
         </div>
     </div>
@@ -63,6 +70,7 @@
            <i class="fas fa-globe "></i>
         </span>
     </div>
+
     <textarea id= "text" class="textarea" placeholder="Translated Language"></textarea>
     <button id="copy-button" class="button is-medium  is-info is-outlined"> Copy</button>
 
