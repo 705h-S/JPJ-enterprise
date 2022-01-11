@@ -4,6 +4,6 @@ $.ajax({
     method: "GET"
   }).then(function(data) {
     console.log(data.quote);
-    $(".input").text(data.quote).val();
+    $("#qoute").text(data.quote).val();
   })
 
