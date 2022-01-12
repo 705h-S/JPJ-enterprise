@@ -8,8 +8,7 @@ function getQuote() {
     console.log(data.quote);
     $("#qoute").text(data.quote).val();
 
-    var saveBtn = $('#save-button');
-    saveBtn.on('click', function (event) {
+    $('#save-button').on('click', function (event) {
       event.preventDefault();
       var quote = data.quote;
       var quoteKey = refreshCount;
