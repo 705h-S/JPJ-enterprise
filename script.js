@@ -1,13 +1,14 @@
 var refreshCount = 0;
-
-for(var i = 0; i < localStorage.length; i++) {
-  var listQuote = localStorage.getItem(i);
-  var listEl = $('#line');
-  if(localStorage.getItem(i) === null){
+function loadStorage() {
+  for (var i = 0; i < localStorage.length; i++) {
+    var listQuote = localStorage.getItem(i);
+    var listEl = $('#line');
+    if (localStorage.getItem(i) === null) {
+    }
+    else {
+      listEl.append('<li><span class="bd-name">' + listQuote + '</span></li><br>')
+    }
   }
-  else {
-  listEl.append('<li><span class="bd-name">' + listQuote +'</span></li><br>')
-}
 }
 
 function getQuote() {
@@ -36,7 +37,7 @@ $('#refresh-button').on('click', function () {
   console.log(refreshCount)
 })
 
-$('#clear-btn').on('click', function() {
+$('#clear-btn').on('click', function () {
   localStorage.clear();
 })
 
