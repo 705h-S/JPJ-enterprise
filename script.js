@@ -18,15 +18,8 @@ function getQuote() {
   }).then(function (data) {
     console.log(data.quote);
     $("#qoute").text(data.quote).val();
+    var quote = data.quote;
 
-    $('#save-button').on('click', function (event) {
-      event.preventDefault();
-      var quote = data.quote;
-      var quoteKey = refreshCount;
-      localStorage.setItem(quoteKey, quote)
-      console.log(localStorage);
-    })
-    
     const settings = {
       "async": true,
       "crossDomain": true,
@@ -48,6 +41,15 @@ function getQuote() {
     $.ajax(settings).done(function (response) {
       console.log(response);
     });
+
+    $('#save-button').on('click', function (event) {
+      event.preventDefault();
+      var quote = data.quote;
+      var quoteKey = refreshCount;
+      localStorage.setItem(quoteKey, quote)
+      console.log(localStorage);
+    })
+
   })
 }
 
