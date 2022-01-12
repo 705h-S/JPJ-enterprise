@@ -42,3 +42,18 @@ $('#clear-btn').on('click', function () {
   localStorage.clear();
 })
 
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://google-translate1.p.rapidapi.com/language/translate/v2/languages?target=option",
+	"method": "GET",
+	"headers": {
+		"accept-encoding": "application/gzip",
+		"x-rapidapi-host": "google-translate1.p.rapidapi.com",
+		"x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
