@@ -13,15 +13,18 @@
 <body>
 
   <div class="container is-fullhd">
-    <div class="notification is-primary has-text-centered">
+    <div class="notification has-background-grey has-text-centered has-text-grey-lighter is-size-3">
       <img src="images/logo.PNG" alt="Ye" width="112" height="28">
       <p><strong><em> Welcome to the Ye's Translation World</em></strong></p>
     </div>
   </div>
 
   <div class=" is-flex">
-    <div class="column is-one-fifth">
-      <div class="notification is-primary">
+
+    <!-- Saved Quotes 1st coloumn -->
+    <div class="column is-4 ms-4">
+
+      <div class="notification has-background-grey has-text-centered has-text-white">
         <nav class="bd-doc-nav bd-sticked bd-is-sticked">
           <nav id="categories" class="bd-categories bd-has-no-results">
             <div class="bd-category">
@@ -34,17 +37,19 @@
           </nav>
         </nav>
       </div>
-    </div>
 
+    </div>
+       <!-- 2nd coloumn  -->
     <div class="column is-one-third ">
+      <!-- button three 1st row -->
       <div>
         <button id="refresh-button" class="button is-medium  is-info is-outlined">Refresh</button>
         <button id="save-button" class="button is-medium  is-info is-outlined">Save</button>
         <button id="clear-btn" class="button is-medium  is-info is-outlined"
           onClick="window.location.reload();">Clear</button>
-
       </div>
-      <div>
+
+      <!-- Text box 2nd row -->
         <div class="box">
           <article class="media">
             <div class="media-left">
@@ -62,34 +67,34 @@
               </div>
           </article>
         </div>
-      </div>
+      
+        <div class="container">
+
+          <h1 class="title">
+            Select Language
+          </h1>
+    
+          <div class="control has-icons-left">
+            <div class="select is-medium">
+              <select id="select">
+                <option value='' disabled selected>Language</option>
+                <option value='en'>English</option>
+                <option value='es'>Spanish</option>
+              </select>
+            </div>
+          </div>
+    
+          <textarea id="text" class="textarea" placeholder="Translated Language"></textarea>
+          <button id="copy-button" class="button is-medium  is-info is-outlined"> Copy</button>
+    
+        </div>
+
     </div>
+
   </div>
 
 
-  <section class="section is-large">
-    <div class="container">
-      <h1 class="title">
-        Select Language
-      </h1>
-      <div class="control has-icons-left">
-        <div class="select is-medium">
-          <select id="select">
-            <option value='' disabled selected>Language</option>
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
-          </select>
-        </div>
-        <span class="icon is-medium is-left is-info is-primary">
-          <i class="fas fa-globe "></i>
-        </span>
-      </div>
-
-      <textarea id="text" class="textarea" placeholder="Translated Language"></textarea>
-      <button id="copy-button" class="button is-medium  is-info is-outlined"> Copy</button>
-
-    </div>
-  </section>
+  <!-- footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
