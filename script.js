@@ -19,28 +19,29 @@ function getQuote() {
     console.log(data.quote);
     $("#qoute").text(data.quote).val();
     var quote = data.quote;
+    var language = $('#select').val();
 
-    const settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
-      "method": "POST",
-      "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "accept-encoding": "application/gzip",
-        "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-        "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
-      },
-      "data": {
-        "q": quote,
-        "target": language,
-        "source": "en"
-      }
-    };
+    // const settings = {
+    //   "async": true,
+    //   "crossDomain": true,
+    //   "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
+    //   "method": "POST",
+    //   "headers": {
+    //     "content-type": "application/x-www-form-urlencoded",
+    //     "accept-encoding": "application/gzip",
+    //     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
+    //     "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
+    //   },
+    //   "data": {
+    //     "q": quote,
+    //     "target": language,
+    //     "source": "en"
+    //   }
+    // };
 
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-    });
+    // $.ajax(settings).done(function (response) {
+    //   console.log(response);
+    // });
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
