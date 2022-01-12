@@ -30,6 +30,7 @@ function getQuote() {
 }
 
 getQuote();
+loadStorage();
 
 $('#refresh-button').on('click', function () {
   getQuote();
