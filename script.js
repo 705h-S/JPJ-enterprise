@@ -36,4 +36,7 @@ $('#refresh-button').on('click', function () {
   console.log(refreshCount)
 })
 
+$('#clear-btn').on('click', function() {
+  localStorage.clear();
+})
 
