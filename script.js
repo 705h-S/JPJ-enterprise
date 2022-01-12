@@ -9,3 +9,8 @@ function getQuote() {
 }
 
 getQuote();
+
+var refreshBtn = $('#refresh-button') 
+refreshBtn.on('click', function() {
+  getQuote();
+})
