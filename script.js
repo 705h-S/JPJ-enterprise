@@ -14,3 +14,6 @@ var refreshBtn = $('#refresh-button')
 refreshBtn.on('click', function() {
   getQuote();
 })
+
+var saveBtn = $('#save-button');
+console.log(saveBtn)
