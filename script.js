@@ -4,22 +4,31 @@ function getQuote() {
       method: "GET"
     }).then(function(data) {
       console.log(data.quote);
+      dataQuote = (data.quote);
+      console.log(dataQuote)
       $("#qoute").text(data.quote).val();
+
+
+
+
+
     })
 }
 
 getQuote();
 
-var refreshBtn = $('#refresh-button') 
-refreshBtn.on('click', function() {
+$('#refresh-button').on('click', function() {
   getQuote();
+  refreshCount++;
+  console.log(refreshCount)
 })
 
 var refreshCount = 0;
 var saveBtn = $('#save-button');
 saveBtn.on('click', function(event) {
   event.preventDefault();
-  var quote = $('#qoute');
+  var quote = $('#qoute').val();
   var quoteKey = refreshCount;
   localStorage.setItem(quoteKey, quote)
+  console.log(localStorage.getItem(1))
 })
