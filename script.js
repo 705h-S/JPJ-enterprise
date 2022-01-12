@@ -1,5 +1,15 @@
 var refreshCount = 0;
 
+for(var i = 0; i < localStorage.length; i++) {
+  var listQuote = localStorage.getItem(i);
+  var listEl = $('#line');
+  if(localStorage.getItem(i) === null){
+  }
+  else {
+  listEl.append('<li><span class="bd-name">' + listQuote +'</span></li><br>')
+}
+}
+
 function getQuote() {
   $.ajax({
     url: 'https://api.kanye.rest/',
@@ -25,4 +35,5 @@ $('#refresh-button').on('click', function () {
   refreshCount++;
   console.log(refreshCount)
 })
+
 
