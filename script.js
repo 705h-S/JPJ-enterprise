@@ -17,16 +17,12 @@ function getQuote() {
     url: 'https://api.kanye.rest/',
     method: "GET"
   }).then(function (data) {
-    //console.log(data.quote);
     $("#qoute").text(data.quote).val();
     var quote = data.quote;
 
-    // { make this an onclick function for the translate button
     $('#translateBtn').on('click', function () {
       languageRaw = document.querySelector('#langBar');
       language = languageRaw.options[languageRaw.selectedIndex].value;
-      console.log(language);
-      console.log(quote);
 
       const settings = {
         "async": true,
@@ -45,16 +41,12 @@ function getQuote() {
           "source": "en"
         }
       };
-      
+
       $.ajax(settings).done(function (response) {
-        console.log(response);
         var translatedBox = $('#translated-txt');
-        console.log(response.data.translations[0].translatedText)
         translatedBox.text(response.data.translations[0].translatedText)
       });
     })
-
-    //}
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
