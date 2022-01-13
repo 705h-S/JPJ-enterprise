@@ -20,10 +20,11 @@ function getQuote() {
     //console.log(data.quote);
     $("#qoute").text(data.quote).val();
     var quote = data.quote;
-    var language = $('#langBar').val();
 
     // { make this an onclick function for the translate button
     $('#translateBtn').on('click', function () {
+      languageRaw = document.querySelector('#langBar');
+      language = languageRaw.options[languageRaw.selectedIndex].value;
       console.log(language);
       console.log(quote);
 
