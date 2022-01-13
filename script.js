@@ -7,7 +7,7 @@ function loadStorage() {
     if (localStorage.getItem(i) === null) {
     }
     else {
-      listEl.append('<li><span class="bd-name">' + listQuote + '</span></li><br>')
+      listEl.append('<li><span class="bd-name has-background-grey-light has-text-black py-1">' + listQuote + '</span></li><br>')
     }
   }
 }

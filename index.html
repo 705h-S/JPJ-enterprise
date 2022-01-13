@@ -26,17 +26,16 @@
     <div class="column is-4 ms-4">
 
       <div class="notification has-background-grey has-text-centered has-text-white">
-        <nav class="bd-doc-nav bd-sticked bd-is-sticked">
-          <nav id="categories" class="bd-categories ">
-            <div class="bd-category">
+
+  
               <header class="bd-category-header">
-                <strong class="bd-name">Saved Quotes</strong>
+                <strong class="bd-name is-size-4 is-underlined">Saved Quotes</strong>
               </header>
+              <div class='list'>
               <ul id="line" class="bd-category-list">
               </ul>
             </div>
-          </nav>
-        </nav>
+
       </div>
 
     </div>
@@ -44,7 +43,7 @@
     <!-- 2nd coloumn  -->
     <div class="column is-one-third ">
       <!-- button three 1st row -->
-      <div>
+      <div class="my-2">
         <button id="refresh-button" class="button is-medium  is-info is-outlined"><i
             class="fas fa-redo fa-spin"></i></button>
         <button id="save-button" class="button is-medium  is-info is-outlined"><i class="far fa-save"></i></button>
@@ -78,7 +77,6 @@
           <div class="select is-medium">
             <select id="langBar">
               <option value='' disabled selected> Language </option>
-              <option value='en'>English</option>
               <option value='es'>Spanish</option>
               <option value='it'>Italian</option>
               <option value='de'>German (Deutsch)</option>
@@ -94,22 +92,22 @@
               <i class="fas fa-language"></i>
             </span>
           </div>
+
+          <!-- button row -->
+          <div class="control is-flex-direction-row my-2">
+            <a id= "translateBtn" class="button is-primary">
+              <i class="fas fa-language"></i>
+              Translate
+            </a>
+            <a  id="copy-button" class="button is-info ">
+              <i class="fas fa-copy"></i>
+               Copy
+            </a>
+          </div>  
+          <!-- translated output -->
           <div class="field is-grouped">
             <p class="control is-expanded">
               <textarea id='translated-txt' readonly id="text" class="textarea" placeholder="Translated Language"></textarea>
-            </p>
-
-            <p class="control">
-              <a id= "translateBtn" class="button is-primary">
-                <i class="fas fa-language"></i>
-                Translate
-              </a>
-              <div>
-              <a  id="copy-button" class="button is-info ">
-                <i class="fas fa-copy"></i>
-                 Copy
-              </a>
-            </div>
             </p>
           </div>
           <span id="timer"></span>
@@ -123,6 +121,9 @@
         <i class="fas fa-info-circle"></i>
         nfo
       </button>
+<br>
+<!-- spotify widget -->
+      <iframe class="my-4"src="https://open.spotify.com/embed/artist/5K4W6rqBFWDnAN6FQUkS6x?utm_source=generator" width="300" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
       <!-- modal itself -->
       <div id="About-modal" class="modal">
@@ -133,11 +134,30 @@
             <button class="delete" aria-label="close"></button>
           </header>
           <section class="modal-card-body">
-            <h1 class="is-size-2"> Welcome</h1>
+            <h1 class="is-size-2 is-underlined"> Welcome</h1>
             <p> Kanye West is known for his infamous quotes. Unfortunately they’re in English 😣. With this Web Application you can now select your favorite quote from Kanye😇. Save it and or translate so that you can share it with non-english native speakers 🌎. 
             </p>
-            <h2 class=""></h2>
-
+            <h2 class=" is-size-3 is-underlined"> Who's Ye </h2>
+            <p> 
+              Ye, more commonly known by his birth name Kanye West, is an American rapper, record producer, and fashion designer. He is widely regarded as one of the most influential rappers of all time.
+              <a href="https://en.wikipedia.org/wiki/Kanye_West">Wikipedia</a>
+              <br>
+              <img src="https://c.tenor.com/VUYXIwEuzD8AAAAd/kanye.gif" alt="smiling kanye" width="300" height="400">
+            </p>
+            <h3 class="is-size-3 is-underlined"> Using the translate feature</h3>
+            <p> 
+              After you've found a quote that you like,  click on the language dropdown menu. Select the language you want the quote to be translated in. Click on "Translate" button and voilà ! Your translated Ye quote will be displayed in the text box.
+              Additionaly you can copy it so that you can share it with your friends and family ! 
+            </p>
+            <h2 class=" is-size-3 is-underlined"> APIS </h2>
+            <ul>
+            <li>
+            <a href="https://api.kanye.rest/"> Generate random Ye quotes</a>
+            </li>
+            <li>
+              <a href="https://rapidapi.com/company/about/"> Translate quote</a>
+            </li>
+           </ul>
           </section>
           <footer class="modal-card-foot"></footer>
         </div>
