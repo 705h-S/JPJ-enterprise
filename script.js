@@ -45,9 +45,12 @@ function getQuote() {
           "source": "en"
         }
       };
-
+      
       $.ajax(settings).done(function (response) {
         console.log(response);
+        var translatedBox = $('#translated-txt');
+        console.log(response.data.translations[0].translatedText)
+        translatedBox.text(response.data.translations[0].translatedText)
       });
     })
 
