@@ -38,8 +38,23 @@ function getQuote() {
         btn.prop('disabled', true);
         setTimeout(function () {
           btn.prop('disabled', false);
-        }, 15000);
+        }, 10000);
 
+        var timer = 10;
+        var stopInterval = 0;
+        if (stopInterval === 0) {
+
+
+          var timerSpan = $("#timer")
+          timerFunction = setInterval(function () {
+            timer--;
+            timerSpan.text(timer);
+            if (timer <= 0) {
+              clearInterval(stopInterval);
+              timerSpan.text('')
+            }
+          }, 1000)
+        }
 
         const settings = {
           "async": true,
