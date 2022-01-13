@@ -26,17 +26,16 @@
     <div class="column is-4 ms-4">
 
       <div class="notification has-background-grey has-text-centered has-text-white">
-        <nav class="bd-doc-nav bd-sticked bd-is-sticked">
-          <nav id="categories" class="bd-categories ">
-            <div class="bd-category">
+
+  
               <header class="bd-category-header">
-                <strong class="bd-name">Saved Quotes</strong>
+                <strong class="bd-name is-size-4 is-underlined">Saved Quotes</strong>
               </header>
+              <div class='list'>
               <ul id="line" class="bd-category-list">
               </ul>
             </div>
-          </nav>
-        </nav>
+
       </div>
 
     </div>
@@ -94,7 +93,7 @@
             </span>
           </div>
 
-          <!--  -->
+          <!-- button row -->
           <div class="control is-flex-direction-row my-2">
             <a id= "translateBtn" class="button is-primary">
               <i class="fas fa-language"></i>
@@ -104,8 +103,8 @@
               <i class="fas fa-copy"></i>
                Copy
             </a>
-          </div>
-
+          </div>  
+          <!-- translated output -->
           <div class="field is-grouped">
             <p class="control is-expanded">
               <textarea id='translated-txt' readonly id="text" class="textarea" placeholder="Translated Language"></textarea>
