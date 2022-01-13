@@ -12,6 +12,12 @@ function loadStorage() {
   }
 }
 
+$('#copy-button').on('click', function() {
+  var tText = $('#translated-txt');
+  tText.select();
+  navigator.clipboard.writeText(tText.val())
+})
+
 function getQuote() {
   $.ajax({
     url: 'https://api.kanye.rest/',
@@ -23,6 +29,11 @@ function getQuote() {
     $('#translateBtn').on('click', function () {
       languageRaw = $('#langBar');
       language = languageRaw.val();
+      if(language === null) {
+        var translatedBox = $('#translated-txt');
+        translatedBox.text('Please select a language')
+      }
+      else{
       var btn = $(this);
       btn.prop('disabled', true);
       setTimeout(function () {
@@ -65,7 +76,7 @@ function getQuote() {
         var translatedBox = $('#translated-txt');
         translatedBox.text(response.data.translations[0].translatedText)
       });
-    })
+    }})
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
