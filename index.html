@@ -83,17 +83,29 @@
               <option value='it'>Italian</option>
               <option value='de'>German (Deutsch)</option>
             </select>
-
+            <span class="icon is-medium is-left">
+              <i class="fas fa-language"></i>
+            </span>
           </div>
-          <span class="icon is-medium is-left">
-            <i class="fas fa-language"></i>
-          </span>
-          <button id="translateBtn" class="button is-medium  is-info is-outlined"><i class="fas fa-copy"></i></button>
-          <span id="timer"></span>
-        </div>
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <textarea readonly id="text" class="textarea" placeholder="Translated Language"></textarea>
+            </p>
 
-        <textarea readonly id="translated-txt" class="textarea" placeholder="Translated Language"></textarea>
-        <button id="copy-button" class="button is-medium  is-info is-outlined"><i class="fas fa-copy"></i></button>
+            <p class="control">
+              <a id= "translateBtn"class="button is-primary">
+                <i class="fas fa-language"></i>
+                Translate
+              </a>
+              <div>
+              <a  id="copy-button" class="button is-info ">
+                <i class="fas fa-copy"></i>
+                 Copy
+              </a>
+            </div>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
