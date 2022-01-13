@@ -44,7 +44,7 @@
     <!-- 2nd coloumn  -->
     <div class="column is-one-third ">
       <!-- button three 1st row -->
-      <div>
+      <div class="my-2">
         <button id="refresh-button" class="button is-medium  is-info is-outlined"><i
             class="fas fa-redo fa-spin"></i></button>
         <button id="save-button" class="button is-medium  is-info is-outlined"><i class="far fa-save"></i></button>
@@ -93,22 +93,22 @@
               <i class="fas fa-language"></i>
             </span>
           </div>
+
+          <!--  -->
+          <div class="control is-flex-direction-row my-2">
+            <a id= "translateBtn" class="button is-primary">
+              <i class="fas fa-language"></i>
+              Translate
+            </a>
+            <a  id="copy-button" class="button is-info ">
+              <i class="fas fa-copy"></i>
+               Copy
+            </a>
+          </div>
+
           <div class="field is-grouped">
             <p class="control is-expanded">
               <textarea id='translated-txt' readonly id="text" class="textarea" placeholder="Translated Language"></textarea>
-            </p>
-
-            <p class="control">
-              <a id= "translateBtn" class="button is-primary">
-                <i class="fas fa-language"></i>
-                Translate
-              </a>
-              <div>
-              <a  id="copy-button" class="button is-info ">
-                <i class="fas fa-copy"></i>
-                 Copy
-              </a>
-            </div>
             </p>
           </div>
           <span id="timer"></span>
