@@ -17,11 +17,12 @@ function getQuote() {
     url: 'https://api.kanye.rest/',
     method: "GET"
   }).then(function (data) {
-    console.log(data.quote);
+    //console.log(data.quote);
     $("#qoute").text(data.quote).val();
     var quote = data.quote;
     var language = $('#select').val();
 
+    // { make this an onclick function for the translate button
     // const settings = {
     //   "async": true,
     //   "crossDomain": true,
@@ -43,6 +44,10 @@ function getQuote() {
     // $.ajax(settings).done(function (response) {
     //   console.log(response);
     // });
+    console.log(language)
+    console.log(quote)
+
+    //}
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
