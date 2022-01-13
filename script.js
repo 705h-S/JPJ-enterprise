@@ -1,5 +1,6 @@
 var refreshCount = 0;
 function loadStorage() {
+  $('#line').text('');
   for (var i = 0; i < localStorage.length; i++) {
     var listQuote = localStorage.getItem(i);
     var listEl = $('#line');
