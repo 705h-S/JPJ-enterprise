@@ -17,7 +17,7 @@ function getQuote() {
     url: 'https://api.kanye.rest/',
     method: "GET"
   }).then(function (data) {
-    $("#qoute").text(data.quote).val();
+    $("#quote").text(data.quote).val();
     var quote = data.quote;
 
     $('#translateBtn').on('click', function () {
