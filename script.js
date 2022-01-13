@@ -92,6 +92,8 @@ $('#clear-btn').on('click', function () {
   localStorage.clear();
 })
 
+
+// js for modal 
 document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -126,6 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $close.addEventListener('click', () => {
       closeModal($target);
     });
+  });
+
+  // keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) { // Escape key
+      closeAllModals();
+    }
   });
 
   
