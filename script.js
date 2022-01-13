@@ -49,6 +49,7 @@ function getQuote() {
       var quoteKey = refreshCount;
       localStorage.setItem(quoteKey, quote)
       console.log(localStorage);
+      loadStorage()
     })
 
   })
