@@ -12,7 +12,7 @@ function loadStorage() {
   }
 }
 
-$('#copy-button').on('click', function() {
+$('#copy-button').on('click', function () {
   var tText = $('#translated-txt');
   tText.select();
   navigator.clipboard.writeText(tText.val())
@@ -29,60 +29,48 @@ function getQuote() {
     $('#translateBtn').on('click', function () {
       languageRaw = $('#langBar');
       language = languageRaw.val();
-      if(language === null) {
+      if (language === null) {
         var translatedBox = $('#translated-txt');
         translatedBox.text('Please select a language')
       }
-      else{
-      var btn = $(this);
-      btn.prop('disabled', true);
-      setTimeout(function () {
-        btn.prop('disabled', false);
-      }, 15000);
+      else {
+        var btn = $('#translateBtn');
+        btn.prop('disabled', true);
+        setTimeout(function () {
+          btn.prop('disabled', false);
+        }, 15000);
 
-      var timer = 15;
-      var stopInterval = 0;
-      var timerSpan = $("#timer")
-      if (stopInterval === 0) {
-        timerFunction = setInterval(function () {
-          timer--;
-          timerSpan.text(timer)
-          if (timer <= 0) {
-            clearInterval(stopInterval);
-            timerSpan.text('')
+
+        const settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
+          "method": "POST",
+          "headers": {
+            "content-type": "application/x-www-form-urlencoded",
+            "accept-encoding": "application/gzip",
+            "x-rapidapi-host": "google-translate1.p.rapidapi.com",
+            "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
+          },
+          "data": {
+            "q": quote,
+            "target": language,
+            "source": "en"
           }
-        }, 1000)
+        };
+
+        $.ajax(settings).done(function (response) {
+          var translatedBox = $('#translated-txt');
+          translatedBox.text(response.data.translations[0].translatedText)
+        });
       }
-
-      const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
-        "method": "POST",
-        "headers": {
-          "content-type": "application/x-www-form-urlencoded",
-          "accept-encoding": "application/gzip",
-          "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-          "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
-        },
-        "data": {
-          "q": quote,
-          "target": language,
-          "source": "en"
-        }
-      };
-
-      $.ajax(settings).done(function (response) {
-        var translatedBox = $('#translated-txt');
-        translatedBox.text(response.data.translations[0].translatedText)
-      });
-    }})
+    })
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
       var quote = data.quote;
       var quoteKey = refreshCount;
-      localStorage.setItem(quoteKey, quote) 
+      localStorage.setItem(quoteKey, quote)
       console.log(localStorage);
       loadStorage()
     })
@@ -121,16 +109,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// Main event
-(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-  const modal = $trigger.dataset.target;
-  const $target = document.getElementById(modal);
-  console.log($target);
+  // Main event
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+    console.log($target);
 
-  $trigger.addEventListener('click', () => {
-    openModal($target);
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
   });
-});
 
   // click event on various child elements to close the parent modal
   (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
@@ -150,5 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  
+
 });
