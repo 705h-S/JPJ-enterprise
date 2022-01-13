@@ -92,4 +92,3 @@ $('#clear-btn').on('click', function () {
   localStorage.clear();
 })
 
-
