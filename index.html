@@ -41,53 +41,49 @@
 
     </div>
 
-       <!-- 2nd coloumn  -->
+    <!-- 2nd coloumn  -->
     <div class="column is-one-third ">
       <!-- button three 1st row -->
       <div>
-        <button id="refresh-button" class="button is-medium  is-info is-outlined"><i class="fas fa-redo fa-spin"></i></button>
+        <button id="refresh-button" class="button is-medium  is-info is-outlined"><i
+            class="fas fa-redo fa-spin"></i></button>
         <button id="save-button" class="button is-medium  is-info is-outlined"><i class="far fa-save"></i></button>
-        <button id="clear-btn" class="button is-medium  is-info is-outlined"
-          onClick="window.location.reload();"><i class="fas fa-trash-alt"></i></button>
+        <button id="clear-btn" class="button is-medium  is-info is-outlined" onClick="window.location.reload();"><i
+            class="fas fa-trash-alt"></i></button>
       </div>
 
       <!-- Text box 2nd row -->
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="images/stare-dont-blink.gif" alt="Image">
-              </figure>
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/stare-dont-blink.gif" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong> ye </strong> <small>@kanyewest •</small> <small>now</small>
+                <br>
+              <p id="quote"> blank</p>
+              </p>
             </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong> Ye </strong> <small>@kanyewest</small> <small>now</small>
-                  <br>
-                <p id="quote"> blank</p>
-                </p>
-              </div>
-          </article>
-        </div>
-      
-        <div class="container">
-          <h1 class="title">
-            Select Language
-          </h1>
-    
-          <div class="control has-icons-left">
-            <div class="select is-medium">
-              <select id="langBar">
-                <option value= '' disabled selected> Language </option>
-                <option value='en'>English</option>
-                <option value='es'>Spanish</option>
-              </select>
-              
-            </div>
-            <span class="icon is-medium is-left">
-              <i class="fas fa-language"></i>
-            </span>
-              <button id="translateBtn" class="button is-medium  is-info is-outlined"><i class="fas fa-language"></i></button>
+        </article>
+      </div>
+
+      <div class="container">
+        <h1 class="title">Select Language</h1>
+
+        <div class="control has-icons-left">
+          <div class="select is-medium">
+            <select id="langBar">
+              <option value='' disabled selected> Language </option>
+              <option value='en'>English</option>
+              <option value='es'>Spanish</option>
+              <option value='it'>Italian</option>
+              <option value='de'>German (Deutsch)</option>
+            </select>
+
           </div>
           <div class="field is-grouped">
             <p class="control is-expanded">
@@ -101,6 +97,10 @@
             </p>
           </div>
         </div>
+
+        <textarea readonly id="translated-txt" class="textarea" placeholder="Translated Language"></textarea>
+        <button id="copy-button" class="button is-medium  is-info is-outlined"><i class="fas fa-copy"></i></button>
+      </div>
     </div>
   </div>
 
@@ -109,7 +109,10 @@
   <footer class="footer has-background-$blue: hsl(229, 53%, 53%)">
     <div class="content has-text-centered">
       <p>
-        <strong>I am Ye</strong> by Jason, Joshua, and PangTa
+        <strong>I am Ye</strong> by 
+        Jason, 
+        Joshua, and 
+        PangTa
       </p>
       <div class="container ">
         <a class="px-3" href="">LinkedIn</a>
