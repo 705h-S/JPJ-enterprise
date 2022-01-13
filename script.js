@@ -17,7 +17,7 @@ function getQuote() {
     method: "GET"
   }).then(function (data) {
     console.log(data.quote);
-    $("#qoute").text(data.quote).val();
+    $("#quote").text(data.quote).val();
     var quote = data.quote;
     var language = $('#select').val();
 
@@ -47,7 +47,7 @@ function getQuote() {
       event.preventDefault();
       var quote = data.quote;
       var quoteKey = refreshCount;
-      localStorage.setItem(quoteKey, quote)
+      localStorage.setItem(quoteKey, quote) 
       console.log(localStorage);
       loadStorage()
     })
