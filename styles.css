@@ -1,1 +1,12 @@
-
+@media screen and (max-width: 992px) {
+    body {
+      background: #772014;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    button {
+      background-color: #8ac4ff;
+    }
+  }
+  
