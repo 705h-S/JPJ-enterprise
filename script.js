@@ -1,5 +1,6 @@
 var refreshCount = 0;
 function loadStorage() {
+  $('#line').text('');
   for (var i = 0; i < localStorage.length; i++) {
     var listQuote = localStorage.getItem(i);
     var listEl = $('#line');
@@ -16,32 +17,40 @@ function getQuote() {
     url: 'https://api.kanye.rest/',
     method: "GET"
   }).then(function (data) {
-    console.log(data.quote);
+    //console.log(data.quote);
     $("#qoute").text(data.quote).val();
     var quote = data.quote;
-    var language = $('#select').val();
+    var language = $('#langBar').val();
 
-    // const settings = {
-    //   "async": true,
-    //   "crossDomain": true,
-    //   "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
-    //   "method": "POST",
-    //   "headers": {
-    //     "content-type": "application/x-www-form-urlencoded",
-    //     "accept-encoding": "application/gzip",
-    //     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    //     "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
-    //   },
-    //   "data": {
-    //     "q": quote,
-    //     "target": language,
-    //     "source": "en"
-    //   }
-    // };
+    // { make this an onclick function for the translate button
+    $('#translateBtn').on('click', function () {
+      console.log(language);
+      console.log(quote);
 
-    // $.ajax(settings).done(function (response) {
-    //   console.log(response);
-    // });
+      // const settings = {
+      //   "async": true,
+      //   "crossDomain": true,
+      //   "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
+      //   "method": "POST",
+      //   "headers": {
+      //     "content-type": "application/x-www-form-urlencoded",
+      //     "accept-encoding": "application/gzip",
+      //     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
+      //     "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
+      //   },
+      //   "data": {
+      //     "q": quote,
+      //     "target": language,
+      //     "source": "en"
+      //   }
+      // };
+
+      // $.ajax(settings).done(function (response) {
+      //   console.log(response);
+      // });
+    })
+
+    //}
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
