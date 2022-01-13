@@ -71,7 +71,7 @@ function getQuote() {
       event.preventDefault();
       var quote = data.quote;
       var quoteKey = refreshCount;
-      localStorage.setItem(quoteKey, quote)
+      localStorage.setItem(quoteKey, quote) 
       console.log(localStorage);
       loadStorage()
     })
