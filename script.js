@@ -21,8 +21,8 @@ function getQuote() {
     var quote = data.quote;
 
     $('#translateBtn').on('click', function () {
-      languageRaw = document.querySelector('#langBar');
-      language = languageRaw.options[languageRaw.selectedIndex].value;
+      languageRaw = $('#langBar');
+      language = languageRaw.val();
 
       const settings = {
         "async": true,
