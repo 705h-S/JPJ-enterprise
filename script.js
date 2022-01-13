@@ -12,6 +12,12 @@ function loadStorage() {
   }
 }
 
+$('#copy-button').on('click', function() {
+  var tText = $('#translated-txt');
+  tText.select();
+  navigator.clipboard.writeText(tText.val())
+})
+
 function getQuote() {
   $.ajax({
     url: 'https://api.kanye.rest/',
