@@ -17,40 +17,55 @@ function getQuote() {
     url: 'https://api.kanye.rest/',
     method: "GET"
   }).then(function (data) {
-    //console.log(data.quote);
-    $("#qoute").text(data.quote).val();
+    $("#quote").text(data.quote).val();
     var quote = data.quote;
-    var language = $('#langBar').val();
 
-    // { make this an onclick function for the translate button
     $('#translateBtn').on('click', function () {
-      console.log(language);
-      console.log(quote);
+      languageRaw = $('#langBar');
+      language = languageRaw.val();
+      var btn = $(this);
+      btn.prop('disabled', true);
+      setTimeout(function () {
+        btn.prop('disabled', false);
+      }, 15000);
 
-      // const settings = {
-      //   "async": true,
-      //   "crossDomain": true,
-      //   "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
-      //   "method": "POST",
-      //   "headers": {
-      //     "content-type": "application/x-www-form-urlencoded",
-      //     "accept-encoding": "application/gzip",
-      //     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-      //     "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
-      //   },
-      //   "data": {
-      //     "q": quote,
-      //     "target": language,
-      //     "source": "en"
-      //   }
-      // };
+      var timer = 15;
+      var stopInterval = 0;
+      var timerSpan = $("#timer")
+      if (stopInterval === 0) {
+        timerFunction = setInterval(function () {
+          timer--;
+          timerSpan.text(timer)
+          if (timer <= 0) {
+            clearInterval(stopInterval);
+            timerSpan.text('')
+          }
+        }, 1000)
+      }
 
-      // $.ajax(settings).done(function (response) {
-      //   console.log(response);
-      // });
+      const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://google-translate1.p.rapidapi.com/language/translate/v2",
+        "method": "POST",
+        "headers": {
+          "content-type": "application/x-www-form-urlencoded",
+          "accept-encoding": "application/gzip",
+          "x-rapidapi-host": "google-translate1.p.rapidapi.com",
+          "x-rapidapi-key": "efc296c17amsh2b92351a9d6aac9p10ae07jsn7e37b7e7e385"
+        },
+        "data": {
+          "q": quote,
+          "target": language,
+          "source": "en"
+        }
+      };
+
+      $.ajax(settings).done(function (response) {
+        var translatedBox = $('#translated-txt');
+        translatedBox.text(response.data.translations[0].translatedText)
+      });
     })
-
-    //}
 
     $('#save-button').on('click', function (event) {
       event.preventDefault();
