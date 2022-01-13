@@ -23,6 +23,25 @@ function getQuote() {
     $('#translateBtn').on('click', function () {
       languageRaw = $('#langBar');
       language = languageRaw.val();
+      var btn = $(this);
+      btn.prop('disabled', true);
+      setTimeout(function () {
+        btn.prop('disabled', false);
+      }, 15000);
+
+      var timer = 15;
+      var stopInterval = 0;
+      var timerSpan = $("#timer")
+      if (stopInterval === 0) {
+        timerFunction = setInterval(function () {
+          timer--;
+          timerSpan.text(timer)
+          if (timer <= 0) {
+            clearInterval(stopInterval);
+            timerSpan.text('')
+          }
+        }, 1000)
+      }
 
       const settings = {
         "async": true,
