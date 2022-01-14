@@ -168,3 +168,28 @@ $("#signupbtn").on("click", function(event){
   localStorage.setItem("Email", email)
   location.reload();
 })
+
+var validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const validate = () => {
+  const valid = $('#valid');
+  const email = $('#email').val();
+  valid.text('');
+
+  if (validateEmail(email)) {
+    valid.text(email + ' is valid :)');
+    valid.css('color', 'green');
+  } else {
+    valid.text(email + ' is not valid :(');
+    valid.removeClass('fa-check');
+    valid.addClass('fa-times-circle')
+    valid.css('color', 'red')
+  }
+  return false;
+}
+
+$('#email').on('input', validate);
