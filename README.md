@@ -47,7 +47,7 @@ ___
 
 ## APIS
   - <a href ="api.kanye.rest/">Kanye Quote Api</a>
-  - <a href ="https://rapidapi.com/googlecloud/api/google-translate1/details"Google> Translate API</a>
+  - <a href ="https://rapidapi.com/googlecloud/api/google-translate1/details"> Google Translate API </a>
 ___
 
 ## Functionality
