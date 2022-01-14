@@ -155,3 +155,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+//click to save it in the local
+$("#signupbtn").on("click", function(event){
+  event.preventDefault();
+  var first = $("#first").val();
+  console.log(first);
+  localStorage.setItem("first name", first)
+  var last = $("#last").val();
+  localStorage.setItem("Last name", last)
+  var email = $("#email").val();
+  localStorage.setItem("Email", email)
+  location.reload();
+})
