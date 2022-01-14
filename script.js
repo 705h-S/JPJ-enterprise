@@ -181,10 +181,10 @@ const validate = () => {
   valid.text('');
 
   if (validateEmail(email)) {
-    valid.text(email + ' is valid :)');
     valid.css('color', 'green');
+    valid.addClass('fa-check')
+    valid.removeClass('fa-times-circle')
   } else {
-    // valid.text(email + ' is not valid :(');
     valid.removeClass('fa-check');
     valid.addClass('fa-times-circle')
     valid.css('color', 'red')
