@@ -248,4 +248,3 @@ const validateL = () => {
   return false;
 }
 $('#last').on('input', validateL);
-
