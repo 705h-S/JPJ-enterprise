@@ -2,19 +2,29 @@
 
 
 var el = document.getElementById("logo")
+
+function Logoin (){
 dynamics.animate( el, {
-  translateX: 350,
-  scale: 2,
-  opacity: 0.5
+  scale: 3,
 }, {
-  type: dynamics.spring,
-  frequency: 200,
-  friction: 200,
-  duration: 1500
+  type: dynamics.bezier,
+  points:[{"x":0,"y":0,"cp":[{"x":0.2,"y":0}]},
+  {"x":0.5,"y":-0.4,"cp":[{"x":0.4,"y":-0.4},{"x":0.8,"y":-0.4}]},
+  {"x":1,"y":1,"cp":[{"x":0.8,"y":1}]}]
 })
+}
+Logoin()
+// function logoOut(){
+//   dynamics.animate( el, {
+//     scale: 2,
+//   }, {
+//     type: dynamics.bezier,
+//     points:[{"x":0,"y":0,"cp":[{"x":0.2,"y":0}]},
+//     {"x":0.5,"y":-0.4,"cp":[{"x":0.4,"y":-0.4},{"x":0.8,"y":-0.4}]},
+//     {"x":1,"y":1,"cp":[{"x":0.8,"y":1}]}]
+//   })
 
-
-
+// }
 
 
 var refreshCount = 0;
