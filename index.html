@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <!-- 3rd party API -->
-  <link rel='stylesheet' href='mprogress.min.css'/>
+ 
   <script src="https://kit.fontawesome.com/4d6f1a50fa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,7 +17,7 @@
 
   <div class="container is-fullhd">
     <div class="notification has-background-grey has-text-centered has-text-grey-lighter is-size-3">
-      <img src="images/logo.PNG" alt="Ye" width="112" height="28">
+      <img id="logo" src="images/logo.PNG" alt="Ye" width="112" height="28">
       <p><strong><em> Welcome to the Ye's Translation World</em></strong></p>
     </div>
   </div>
@@ -112,7 +112,7 @@
               <textarea id='translated-txt' readonly id="text" class="textarea" placeholder="Translated Language"></textarea>
             </p>
           </div>
-          <span id="timer"></span>
+          <div id="timer"></div>
         </div>
       </div>
     </div>
@@ -240,7 +240,7 @@
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src='mprogress.min.js'></script>
+<script src="dynamics.js"></script>
 <script src="script.js"></script>
 
 </html>

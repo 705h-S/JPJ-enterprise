@@ -1,3 +1,22 @@
+
+
+
+
+
+var el = document.getElementById("logo")
+dynamics.animate( el, {
+  translateX: 350,
+  scale: 2,
+  opacity: 0.5
+}, {
+  type: dynamics.spring,
+  frequency: 200,
+  friction: 200,
+  duration: 1500
+})
+
+
+
 var refreshCount = 0;
 function loadStorage() {
   $('#line').text('');
@@ -39,6 +58,9 @@ function getQuote() {
         setTimeout(function () {
           btn.prop('disabled', false);
         }, 10000);
+
+
+
 
         var timer = 10;
         var stopInterval = 0;
