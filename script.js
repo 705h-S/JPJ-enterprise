@@ -1,8 +1,6 @@
 
 
 
-
-
 var el = document.getElementById("logo")
 dynamics.animate( el, {
   translateX: 350,
@@ -14,6 +12,8 @@ dynamics.animate( el, {
   friction: 200,
   duration: 1500
 })
+
+
 
 
 
