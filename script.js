@@ -1,11 +1,12 @@
 
 
 
+
 var el = document.getElementById("logo")
 
 function Logoin (){
 dynamics.animate( el, {
-  scale: 2.5,
+  scale: 2,
 }, {
   type: dynamics.bezier,
   points:[{"x":0,"y":0,"cp":[{"x":0.162,"y":-0.562}]},
@@ -190,18 +191,15 @@ $("#signupbtn").on("click", function(event){
   location.reload();
 })
 
-var validateEmail = (email) => {
-  return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
+
+
 
 const validate = () => {
   const valid = $('#valid');
-  const email = $('#email').val();
+  var email = is.email($('#email').val())
   valid.text('');
 
-  if (validateEmail(email)) {
+  if (email) {
     valid.css('color', 'green');
     valid.addClass('fa-check')
     valid.removeClass('fa-times-circle')
