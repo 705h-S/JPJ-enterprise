@@ -193,7 +193,7 @@ $("#signupbtn").on("click", function(event){
 
 
 
-
+// validates email
 const validate = () => {
   const valid = $('#validE');
   var email = is.email($('#email').val())
@@ -212,7 +212,7 @@ const validate = () => {
 }
 
 $('#email').on('input', validate);
-
+// validates first name
 const validateF = () => {
   const validF = $('#validF');
   var FirstN = is.not.empty($('#first').val())
@@ -230,3 +230,22 @@ const validateF = () => {
   return false;
 }
 $('#first').on('input', validateF);
+// validates last name
+const validateL = () => {
+  const validL = $('#validL');
+  var LastN = is.not.empty($('#last').val())
+  validL.text('');
+
+  if (LastN) {
+    validL.css('color', 'green');
+    validL.addClass('fa-check')
+    validL.removeClass('fa-times-circle')
+  } else {
+    validL.removeClass('fa-check');
+    validL.addClass('fa-times-circle')
+    validL.css('color', 'red')
+  }
+  return false;
+}
+$('#last').on('input', validateL);
+
