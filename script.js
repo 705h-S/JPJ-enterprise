@@ -5,26 +5,15 @@ var el = document.getElementById("logo")
 
 function Logoin (){
 dynamics.animate( el, {
-  scale: 3,
+  scale: 2.5,
 }, {
   type: dynamics.bezier,
-  points:[{"x":0,"y":0,"cp":[{"x":0.2,"y":0}]},
-  {"x":0.5,"y":-0.4,"cp":[{"x":0.4,"y":-0.4},{"x":0.8,"y":-0.4}]},
-  {"x":1,"y":1,"cp":[{"x":0.8,"y":1}]}]
+  points:[{"x":0,"y":0,"cp":[{"x":0.162,"y":-0.562}]},
+  {"x":0.295,"y":0.419,"cp":[{"x":0.195,"y":0.419},{"x":0.395,"y":0.419}]},
+  {"x":1,"y":1,"cp":[{"x":0.416,"y":0.787}]}]
 })
 }
 Logoin()
-// function logoOut(){
-//   dynamics.animate( el, {
-//     scale: 2,
-//   }, {
-//     type: dynamics.bezier,
-//     points:[{"x":0,"y":0,"cp":[{"x":0.2,"y":0}]},
-//     {"x":0.5,"y":-0.4,"cp":[{"x":0.4,"y":-0.4},{"x":0.8,"y":-0.4}]},
-//     {"x":1,"y":1,"cp":[{"x":0.8,"y":1}]}]
-//   })
-
-// }
 
 
 var refreshCount = 0;
