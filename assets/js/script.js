@@ -1,3 +1,22 @@
+
+
+
+
+var el = document.getElementById("logo")
+
+function Logoin (){
+dynamics.animate( el, {
+  scale: 2,
+}, {
+  type: dynamics.bezier,
+  points:[{"x":0,"y":0,"cp":[{"x":0.162,"y":-0.562}]},
+  {"x":0.295,"y":0.419,"cp":[{"x":0.195,"y":0.419},{"x":0.395,"y":0.419}]},
+  {"x":1,"y":1,"cp":[{"x":0.416,"y":0.787}]}]
+})
+}
+Logoin()
+
+
 var refreshCount = 0;
 function loadStorage() {
   $('#line').text('');
@@ -39,6 +58,9 @@ function getQuote() {
         setTimeout(function () {
           btn.prop('disabled', false);
         }, 10000);
+
+
+
 
         var timer = 10;
         var stopInterval = 0;
@@ -169,18 +191,15 @@ $("#signupbtn").on("click", function(event){
   location.reload();
 })
 
-var validateEmail = (email) => {
-  return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
 
+
+// validates email
 const validate = () => {
-  const valid = $('#valid');
-  const email = $('#email').val();
+  const valid = $('#validE');
+  var email = is.email($('#email').val())
   valid.text('');
 
-  if (validateEmail(email)) {
+  if (email) {
     valid.css('color', 'green');
     valid.addClass('fa-check')
     valid.removeClass('fa-times-circle')
@@ -193,3 +212,39 @@ const validate = () => {
 }
 
 $('#email').on('input', validate);
+// validates first name
+const validateF = () => {
+  const validF = $('#validF');
+  var FirstN = is.not.empty($('#first').val())
+  validF.text('');
+
+  if (FirstN) {
+    validF.css('color', 'green');
+    validF.addClass('fa-check')
+    validF.removeClass('fa-times-circle')
+  } else {
+    validF.removeClass('fa-check');
+    validF.addClass('fa-times-circle')
+    validF.css('color', 'red')
+  }
+  return false;
+}
+$('#first').on('input', validateF);
+// validates last name
+const validateL = () => {
+  const validL = $('#validL');
+  var LastN = is.not.empty($('#last').val())
+  validL.text('');
+
+  if (LastN) {
+    validL.css('color', 'green');
+    validL.addClass('fa-check')
+    validL.removeClass('fa-times-circle')
+  } else {
+    validL.removeClass('fa-check');
+    validL.addClass('fa-times-circle')
+    validL.css('color', 'red')
+  }
+  return false;
+}
+$('#last').on('input', validateL);
