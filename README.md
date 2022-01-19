@@ -38,12 +38,32 @@ ___
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - used to create elements on the DOM
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) -  to implement complex features on web pages
 - [Bulma](https://bulma.io/)  - Modern features CSS framework
+
+![image](https://user-images.githubusercontent.com/87446864/150054106-fd7e298b-438f-4d5b-8b15-f5480da9ebfe.png)
+![image](https://user-images.githubusercontent.com/87446864/150054150-f5537c1f-3212-4e7b-b2c1-f45aa35fa30a.png)
+
 ___
 
 ## APIS
   - <a href ="api.kanye.rest/">Kanye Quote Api</a>
+ 
+ 
+![image](https://user-images.githubusercontent.com/87446864/150053862-238a8bcd-a458-4265-b8dc-fc3c5fd96959.png)
+![image](https://user-images.githubusercontent.com/87446864/150053875-2a222b5f-3a40-4fd1-9b96-82a8224ff7b1.png)
+
+____
   - <a href ="https://rapidapi.com/googlecloud/api/google-translate1/details"> Google Translate API </a>
+
+
+  ![image](https://user-images.githubusercontent.com/87446864/150053819-b03dcaa7-2922-465b-8d17-bea190c9f745.png)
+![image](https://user-images.githubusercontent.com/87446864/150053834-3792fed6-deb0-46f8-8364-9dcb102c2314.png)
+
+  ______
   - [Is.Js](https://github.com/arasatasaygin/is.js)
+  
+
+![image](https://user-images.githubusercontent.com/87446864/150053652-2f5dc14d-a271-423e-8134-8b4c3b36ec8f.png)
+
 ___
 
 ## Functionality
@@ -99,10 +119,10 @@ ___
 ____
 
 ## Reflection 
-- Holding each other accountable 
-- Giving each other roles
-~ not equally distributing work.
-~ communication 
+- For our improvement as team, We should have solid foundation in giving out roles and assigning,
+- We can improve on organizing our steps better, and following a better workflow that involves the team as a whole. 
+- And improve the communication skill in the team, like the old man said, Without feedback, there is no growth. 
+- We should notified other if you can't show up in the meeting somehow.
 ___
 
 ### License
