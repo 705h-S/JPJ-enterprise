@@ -119,10 +119,10 @@ ___
 ____
 
 ## Reflection 
-- Holding each other accountable 
-- Giving each other roles
-- For our improvement as team, We didn’t really have a solid foundation in giving out roles and assigning, 
-as well as the organization and communication.
+- For our improvement as team, We should have solid foundation in giving out roles and assigning,
+- We can improve on organizing our steps better, and following a better workflow that involves the team as a whole. 
+- And improve the communication skill in the team, like the old man said, Without feedback, there is no growth. 
+- We should notified other if you can't show up in the meeting somehow.
 ___
 
 ### License
